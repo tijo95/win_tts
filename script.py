@@ -12,7 +12,7 @@ params = {
     "active": True,
     "autoplay": True,
     "show_text": True,
-    "live_tts_enabled": False,
+    "no_audio_player": False,
     "rate": 165,
     "volume": 0.9,
     "system_voice": "Microsoft Zira Desktop - English (United States)",
@@ -70,7 +70,7 @@ def output_modifier(string, state):
     if not params['active']:
         return string
 
-    if params['live_tts_enabled']:
+    if params['no_audio_player']:
         speak_live_tts(string)
     else:
         if string == '':
@@ -118,18 +118,18 @@ def save_settings():
         "rate": params["rate"],
         "volume": params["volume"],
         "system_voice": params["system_voice"],
-        "live_tts_enabled": params["live_tts_enabled"]
+        "no_audio_player": params["no_audio_player"]
     }
 
     with open(settings_file, 'w') as json_file:
         json.dump(settings, json_file, indent=4)
 
 def ui():
-    with gr.Accordion(params["display_name"], open=False):
+    with gr.Accordion(params["display_name"], open=True):
         activate = gr.Checkbox(value=params['active'], label='Active extension')
         autoplay = gr.Checkbox(value=params['autoplay'], label='Play TTS automatically')
         show_text = gr.Checkbox(value=params['show_text'], label='Show message text under audio player')
-        live_tts_checkbox = gr.Checkbox(value=params['live_tts_enabled'], label='No audio player displayed')
+        live_tts_checkbox = gr.Checkbox(value=params['no_audio_player'], label='No audio player displayed')
         
         rate_slider = gr.Slider(minimum=50, maximum=200, label='Speech Rate', value=params['rate'])
         volume_slider = gr.Slider(minimum=0, maximum=1, step=0.1, label='Voice Volume', value=params['volume'])
@@ -143,7 +143,7 @@ def ui():
         rate_slider.change(lambda x: params.update({'rate': x}), rate_slider, None)
         volume_slider.change(lambda x: params.update({'volume': x}), volume_slider, None)
         voice_dropdown.change(lambda x: params.update({'system_voice': x}), voice_dropdown, None)
-        live_tts_checkbox.change(lambda x: params.update({'live_tts_enabled': x}), live_tts_checkbox, None)
+        live_tts_checkbox.change(lambda x: params.update({'no_audio_player': x}), live_tts_checkbox, None)
 
         save_button = gr.Button("Save Settings")
         save_button.click(save_settings, None)
