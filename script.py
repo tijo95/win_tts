@@ -125,7 +125,7 @@ def save_settings():
         json.dump(settings, json_file, indent=4)
 
 def ui():
-    with gr.Accordion(params["display_name"], open=True):
+    with gr.Accordion(params["display_name"], open=False):
         activate = gr.Checkbox(value=params['active'], label='Active extension')
         autoplay = gr.Checkbox(value=params['autoplay'], label='Play TTS automatically')
         show_text = gr.Checkbox(value=params['show_text'], label='Show message text under audio player')
