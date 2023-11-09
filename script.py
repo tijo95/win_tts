@@ -15,7 +15,7 @@ params = {
     "live_tts_enabled": False,
     "rate": 165,
     "volume": 0.9,
-    "system_voice": "Microsoft Julie - French (France)",
+    "system_voice": "Microsoft Zira Desktop - English (United States)",
 }
 
 def load_settings():
