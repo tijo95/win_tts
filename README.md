@@ -31,7 +31,7 @@ Automatic playback: Users can choose to have the audio file played back automati
 
 Text Display: The extension also offers the option of displaying text or not, in addition to the generated audio.
 
-Live TTS: Users can activate real-time text-to-speech, allowing a voice synthesizer to read the text as it is typed "once the wav audio recording is deactivated".
+No audio player displayed: doesn't display a player and doesn't save the wav file.
 
 Customizable parameters: The extension offers customizable parameters, such as speech speed, volume and system voice selection.
 
