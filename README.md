@@ -7,14 +7,15 @@ Synthèses vocale oobabooga
 
 - [Installation](#installation)
 - [Functionality](#functionality)
-- [Configuration](#configuration)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
 
 ## Installation
 
-Décrivez comment installer les dépendances et obtenir votre projet en cours d'exécution.
+Now clone this repository in the extensions folder :
+```bash
+git clone https://github.com/tijo95/win_tts.git
+```
 
+Install pytssx4 library
 ```bash
 pip install -r requirements.txt
 ```
