@@ -1,0 +1,9 @@
+{
+    "active": true,
+    "autoplay": true,
+    "show_text": true,
+    "rate": 165,
+    "volume": 0.9,
+    "system_voice": "Microsoft Julie - French (France)",
+    "live_tts_enabled": false
+}
