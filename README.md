@@ -18,7 +18,7 @@ Now clone this repository in the extensions folder :
 git clone https://github.com/tijo95/win_tts.git
 ```
 
-Install pytssx4 library
+Install pyttsx4 library
 ```bash
 pip install -r requirements.txt
 ```
