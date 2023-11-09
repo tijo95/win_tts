@@ -5,5 +5,5 @@
     "rate": 165,
     "volume": 0.9,
     "system_voice": "Microsoft Zira Desktop - English (United States)",
-    "live_tts_enabled": false
+    "no_audio_player": false
 }
