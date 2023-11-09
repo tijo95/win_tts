@@ -2,7 +2,7 @@
 Synthèses vocale oobabooga
 
 "Win TTS" is a text-to-speech extension for Oobabooga. It offers text-to-speech functionality to enrich the user experience within the Oobabooga environment.
-![Image depuis Google Drive](https://drive.google.com/file/d/1X0Pn-0P7h7RrxB5bOU_xHdqgxQbCyLy5/view?usp=drive_link)
+![Image depuis Google Drive](https://drive.google.com/file/d/1X0Pn-0P7h7RrxB5bOU_xHdqgxQbCyLy5/view?usp=sharing)
 ## Table des matières
 
 - [Installation](#installation)
