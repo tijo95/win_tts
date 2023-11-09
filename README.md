@@ -9,6 +9,7 @@ Synthèses vocale oobabooga
 
 - [Installation](#installation)
 - [Functionality](#functionality)
+- [Bonus](#bonus)
 
 ## Installation
 
@@ -38,4 +39,28 @@ Save TTS Outputs: The extension lets you save settings.
 
 remove wav directory: removes all wav files from the directory. 
 
+## Bonus
 
+under windows11* some "fr" voices are not in the right system directory to be detected they can be moved easily from the registry , For "fr" voices I put you the registry file to run directly .
+
+for other languages "en", "es" ... I'll show you what to do if you have unavailable voices after running the extensions.
+
+Here is a summary of the steps I followed. It assumes that you already have downloaded the voice packs .
+
+1- Open ```regedit.exe``` (Windows + R, and type regedit) and navigate to the Registry key ```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech_OneCore\Voices\Tokens```.
+
+2- Right click on the voice you want to use and chose export.
+
+3- Open the exported file with a text editor (for example Notepad++).
+
+4- Copy all the text a second time in the file so you have everything two times (except the first line ```Windows Registry Editor Version 5.00```).
+
+5- In the first part of the data, replace ```\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech_OneCore\Voices\Tokens``` by ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens``` (you have to do this at two distinct places).
+
+6- In the second part (the one you pasted below), do the same but change for ```HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens``` (again, two places to change).
+
+7- Save the file, close it, and double click it. Accept the registry modification.
+
+8- Restart your computer.
+
+Now the exported voices are available to use with pyttsx4!
