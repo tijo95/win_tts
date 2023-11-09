@@ -129,7 +129,7 @@ def ui():
         activate = gr.Checkbox(value=params['active'], label='Active extension')
         autoplay = gr.Checkbox(value=params['autoplay'], label='Play TTS automatically')
         show_text = gr.Checkbox(value=params['show_text'], label='Show message text under audio player')
-        live_tts_checkbox = gr.Checkbox(value=params['no_audio_player'], label='No audio player displayed')
+        no_audio_player_checkbox = gr.Checkbox(value=params['no_audio_player'], label='No audio player displayed')
         
         rate_slider = gr.Slider(minimum=50, maximum=200, label='Speech Rate', value=params['rate'])
         volume_slider = gr.Slider(minimum=0, maximum=1, step=0.1, label='Voice Volume', value=params['volume'])
@@ -143,7 +143,7 @@ def ui():
         rate_slider.change(lambda x: params.update({'rate': x}), rate_slider, None)
         volume_slider.change(lambda x: params.update({'volume': x}), volume_slider, None)
         voice_dropdown.change(lambda x: params.update({'system_voice': x}), voice_dropdown, None)
-        live_tts_checkbox.change(lambda x: params.update({'no_audio_player': x}), live_tts_checkbox, None)
+        no_audio_player_checkbox.change(lambda x: params.update({'no_audio_player': x}), no_audio_player_checkbox, None)
 
         save_button = gr.Button("Save Settings")
         save_button.click(save_settings, None)
