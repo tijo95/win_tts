@@ -49,7 +49,7 @@ def tts(text, output_file):
     engine.save_to_file(cleaned_text, output_file)
     engine.runAndWait()
 
-def speak_live_tts(text):
+def speak_tts(text):
     cleaned_text = clean_text(text)
     engine = pyttsx4.init()
     engine.setProperty('rate', params['rate'])
@@ -71,7 +71,7 @@ def output_modifier(string, state):
         return string
 
     if params['no_audio_player']:
-        speak_live_tts(string)
+        speak_tts(string)
     else:
         if string == '':
             string = '*Empty reply, try regenerating*'
